@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <x-background />
     
     <div class="particles"></div>
 

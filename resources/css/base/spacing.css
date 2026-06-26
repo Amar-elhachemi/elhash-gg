@@ -1,0 +1,97 @@
+/* ==========================================
+   SPACING SYSTEM
+========================================== */
+
+.section{
+
+    padding:140px 0;
+
+}
+
+.section-sm{
+
+    padding:80px 0;
+
+}
+
+.container{
+
+    width:min(var(--container),92%);
+
+    margin:auto;
+
+}
+
+.container-lg{
+
+    width:min(var(--container-lg),94%);
+
+    margin:auto;
+
+}
+
+.stack-1>*+*{
+
+    margin-top:12px;
+
+}
+
+.stack-2>*+*{
+
+    margin-top:20px;
+
+}
+
+.stack-3>*+*{
+
+    margin-top:32px;
+
+}
+
+.stack-4>*+*{
+
+    margin-top:48px;
+
+}
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:32px;
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+@media(max-width:1000px){
+
+.grid-4,
+.grid-3,
+.grid-2{
+
+grid-template-columns:1fr;
+
+}
+
+}
