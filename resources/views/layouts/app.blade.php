@@ -14,6 +14,8 @@
 </head>
 
 <body>
+    
+    <div class="particles"></div>
 
 <header class="navbar">
 

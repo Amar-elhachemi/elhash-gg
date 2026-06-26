@@ -412,3 +412,184 @@ opacity:.45;
 pointer-events:none;
 
 }
+/* ==========================================
+   FEATURED TOOLS
+========================================== */
+
+.featured-tool{
+
+position:relative;
+
+}
+
+.tool-status{
+
+display:inline-flex;
+
+margin-bottom:20px;
+
+padding:8px 14px;
+
+border-radius:999px;
+
+background:rgba(249,115,22,.15);
+
+color:var(--primary);
+
+font-size:.8rem;
+
+font-weight:700;
+
+}
+
+.tool-status.new{
+
+background:rgba(34,197,94,.15);
+
+color:#22c55e;
+
+}
+
+.featured-tool h3{
+
+margin-bottom:18px;
+
+font-size:1.45rem;
+
+}
+
+.featured-tool p{
+
+line-height:1.8;
+
+color:var(--muted);
+
+margin-bottom:40px;
+
+}
+
+.tool-footer{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:auto;
+
+}
+
+.tool-footer span{
+
+font-weight:700;
+
+color:#facc15;
+
+}
+/* ==========================================
+   WHY ELHASH
+========================================== */
+
+.why-card{
+
+    text-align:center;
+
+}
+
+.why-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 30px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    background:rgba(249,115,22,.10);
+
+    transition:.35s;
+
+}
+
+.why-card:hover .why-icon{
+
+    transform:translateY(-8px) rotate(-8deg);
+
+    background:rgba(249,115,22,.20);
+
+}
+
+.why-card h3{
+
+    margin-bottom:18px;
+
+}
+
+.why-card p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+}
+/* ==========================================
+   CTA
+========================================== */
+
+.cta-section{
+
+    padding-top:40px;
+
+}
+
+.cta-card{
+
+    text-align:center;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.cta-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle,
+        rgba(249,115,22,.15),
+        transparent 70%);
+
+}
+
+.cta-content{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:70px 30px;
+
+}
+
+.cta-content h2{
+
+    font-size:clamp(2.3rem,5vw,4rem);
+
+}

@@ -19,3 +19,106 @@
 @import "./pages/home.css";
 @import "./pages/dashboard.css";
 @import "./pages/about.css";
+/* ==========================
+   SCROLL ANIMATION
+========================== */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:
+
+opacity .7s ease,
+
+transform .7s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+/* ==========================
+   MOUSE GLOW
+========================== */
+
+.mouse-glow{
+
+position:fixed;
+
+width:380px;
+
+height:380px;
+
+pointer-events:none;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+
+rgba(249,115,22,.12),
+
+transparent 70%);
+
+transform:translate(-50%,-50%);
+
+z-index:-1;
+
+transition:left .08s linear,
+
+top .08s linear;
+
+}
+/* ==========================
+   PARTICLES
+========================== */
+
+.particles{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+background-image:
+
+radial-gradient(circle,
+
+rgba(255,255,255,.10) 1px,
+
+transparent 1px);
+
+background-size:70px 70px;
+
+opacity:.18;
+
+animation:moveParticles 30s linear infinite;
+
+z-index:-2;
+
+}
+
+@keyframes moveParticles{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-70px);
+
+}
+
+}
