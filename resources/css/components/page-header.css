@@ -1,0 +1,23 @@
+.page-header{
+
+    text-align:center;
+
+    padding:160px 20px 70px;
+
+}
+
+.page-header h1{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+}
+
+.page-header p{
+
+    font-size:20px;
+
+    color:var(--muted);
+
+}
