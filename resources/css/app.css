@@ -5,36 +5,27 @@
 
 @import "./layout/navbar.css";
 @import "./layout/main.css";
-@import "./layout/footer.css";
+@import "./layout/footer.css"; 
 @import "./layout/containers.css";
 
-@import "./components/buttons.css";
+@import "./components/buttons.css"; 
 @import "./components/badges.css";
-@import "./components/cards.css";
-@import "./components/forms.css";
-@import "./components/page-header.css";
-@import "./components/tool-card.css";
-@import "./components/utilities.css";
+@import "./components/cards.css"; 
+@import "./components/forms.css"; 
+@import "./components/page-header.css"; 
+@import "./components/tool-card.css"; 
+@import "./components/utilities.css"; 
 
 @import "./pages/home.css";
 @import "./pages/dashboard.css";
-@import "./pages/about.css";
+@import "./pages/about.css"; 
 /* ==========================
    SCROLL ANIMATION
 ========================== */
 
 .hidden{
-
-opacity:0;
-
-transform:translateY(40px);
-
-transition:
-
-opacity .7s ease,
-
-transform .7s ease;
-
+    opacity:1;
+    transform:none;
 }
 
 .show{

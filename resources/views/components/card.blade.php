@@ -1,6 +1,4 @@
-<div {{ $attributes->merge([
-'class' => 'card'
-]) }}>
+<div {{ $attributes->merge(['class' => 'card']) }}>
 
     <div class="card-glow"></div>
 

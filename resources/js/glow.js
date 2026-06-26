@@ -1,13 +1,16 @@
-const glow = document.createElement("div");
+document.addEventListener("DOMContentLoaded", () => {
 
-glow.className = "mouse-glow";
+    const glow = document.createElement("div");
 
-document.body.appendChild(glow);
+    glow.className = "mouse-glow";
 
-window.addEventListener("mousemove",(e)=>{
+    document.body.appendChild(glow);
 
-glow.style.left=e.clientX+"px";
+    window.addEventListener("mousemove", (e) => {
 
-glow.style.top=e.clientY+"px";
+        glow.style.left = e.clientX + "px";
+        glow.style.top = e.clientY + "px";
+
+    });
 
 });

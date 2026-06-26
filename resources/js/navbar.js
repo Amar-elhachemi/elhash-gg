@@ -1,15 +1,19 @@
 const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", () => {
+if (navbar) {
 
-    if(window.scrollY > 80){
+    window.addEventListener("scroll", () => {
 
-        navbar.classList.add("navbar-small");
+        if (window.scrollY > 80) {
 
-    }else{
+            navbar.classList.add("navbar-small");
 
-        navbar.classList.remove("navbar-small");
+        } else {
 
-    }
+            navbar.classList.remove("navbar-small");
 
-});
+        }
+
+    });
+
+}
