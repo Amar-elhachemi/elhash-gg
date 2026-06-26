@@ -1,0 +1,39 @@
+.crosshair-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 420px;
+
+    gap:30px;
+
+    padding:40px;
+
+}
+
+.preview-panel{
+
+    min-height:650px;
+
+    border-radius:20px;
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.controls-panel{
+
+    min-height:650px;
+
+    border-radius:20px;
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
