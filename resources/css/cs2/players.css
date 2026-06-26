@@ -1,0 +1,133 @@
+/* ======================================================
+   PLAYERS
+====================================================== */
+
+.players-header{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.players-header h2{
+    margin:0;
+}
+
+/* ==========================
+   SEARCH
+========================== */
+
+#playerSearch{
+    width:100%;
+    padding:12px 15px;
+    border:none;
+    border-radius:12px;
+    background:#0f172a;
+    color:#ffffff;
+    font-size:14px;
+    outline:none;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.25s;
+}
+
+#playerSearch:focus{
+    border-color:#f97316;
+    box-shadow:0 0 0 3px rgba(249,115,22,.2);
+}
+
+#playerSearch::placeholder{
+    color:#94a3b8;
+}
+
+/* ==========================
+   PLAYER GRID
+========================== */
+
+.players-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+/* ==========================
+   PLAYER CARD
+========================== */
+
+.player-card{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+
+    width:100%;
+
+    padding:18px;
+
+    background:linear-gradient(
+        145deg,
+        #1f2937,
+        #111827
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    transition:
+        transform .25s,
+        border-color .25s,
+        box-shadow .25s;
+}
+
+.player-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#f97316;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.player-card strong{
+
+    font-size:17px;
+
+    color:#ffffff;
+
+    font-weight:700;
+
+}
+
+.player-card small{
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+}
+
+.player-card.active{
+
+    border-color:#f97316;
+
+    background:linear-gradient(
+        145deg,
+        #2b1b10,
+        #1f2937
+    );
+
+}
+
+/* ==========================
+   LOAD ANIMATION
+========================== */
+
+.player-card:active{
+
+    transform:scale(.98);
+
+}

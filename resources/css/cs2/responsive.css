@@ -1,0 +1,170 @@
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+/* ==========================
+   Laptop
+========================== */
+
+@media (max-width:1200px){
+
+    .crosshair-container{
+        grid-template-columns:1.5fr 1fr;
+    }
+
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width:1000px){
+
+    .crosshair-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .controls-panel{
+
+        position:relative;
+
+        top:0;
+
+    }
+
+    .preview-panel{
+
+        min-height:600px;
+
+    }
+
+    .preview-screen{
+
+        height:600px;
+
+    }
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:768px){
+
+    .crosshair-container{
+
+        margin:20px auto;
+
+        gap:20px;
+
+    }
+
+    .controls-panel{
+
+        padding:20px;
+
+    }
+
+    .preview-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .preview-actions{
+
+        width:100%;
+
+    }
+
+    .map-btn{
+
+        flex:1;
+
+        text-align:center;
+
+    }
+
+    .quick-colors{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .action-buttons{
+
+        gap:10px;
+
+    }
+
+    .primary-btn,
+    .secondary-btn{
+
+        padding:14px;
+
+    }
+
+    #configOutput{
+
+        height:180px;
+
+    }
+
+}
+
+/* ==========================
+   Small Phones
+========================== */
+
+@media (max-width:480px){
+
+    .preview-screen{
+
+        height:450px;
+
+    }
+
+    .preview-panel{
+
+        min-height:450px;
+
+    }
+
+    .controls-panel{
+
+        padding:15px;
+
+    }
+
+    .player-card{
+
+        padding:15px;
+
+    }
+
+    .player-card strong{
+
+        font-size:15px;
+
+    }
+
+    .player-card small{
+
+        font-size:12px;
+
+    }
+
+    .quick-colors{
+
+        gap:8px;
+
+    }
+
+}

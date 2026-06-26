@@ -10,12 +10,38 @@
 
 <x-page-header
     title="🎯 CS2 Crosshair Generator"
-    description="Create, preview and export professional Counter-Strike 2 crosshairs." />
+    description="Create, preview and export professional Counter-Strike 2 crosshairs."
+/>
 
 <div class="crosshair-container">
 
-    <!-- Preview -->
+    <!-- ========================= -->
+    <!-- PREVIEW -->
+    <!-- ========================= -->
+
     <div class="preview-panel">
+
+        <div class="preview-header">
+
+            <h2>Live Preview</h2>
+
+            <div class="preview-actions">
+
+    <button class="map-btn active" data-map="mirage">Mirage</button>
+
+    <button class="map-btn" data-map="dust2">Dust II</button>
+
+    <button class="map-btn" data-map="inferno">Inferno</button>
+
+    <button class="map-btn" data-map="nuke">Nuke</button>
+
+    <button class="map-btn" data-map="ancient">Ancient</button>
+
+    <button class="map-btn" data-map="anubis">Anubis</button>
+
+</div>
+
+        </div>
 
         <div class="preview-screen">
 
@@ -34,136 +60,221 @@
 
     </div>
 
-    <!-- Controls -->
+    <!-- ========================= -->
+    <!-- CONTROLS -->
+    <!-- ========================= -->
+
     <div class="controls-panel">
 
-        <h2>⚙ Crosshair Settings</h2>
+        <div class="panel-section">
 
-        <div class="control-group">
+            <h2>⚙ Crosshair Settings</h2>
 
-            <label>
-                Size
-                <span id="sizeValue">2</span>
-            </label>
+            <div class="control-group">
 
-            <input
-                type="range"
-                id="size"
-                min="1"
-                max="10"
-                value="2">
+                <label>
 
-        </div>
+                    Size
 
-        <div class="control-group">
+                    <span id="sizeValue">2</span>
 
-            <label>
-                Thickness
-                <span id="thicknessValue">1</span>
-            </label>
+                </label>
 
-            <input
-                type="range"
-                id="thickness"
-                min="0.5"
-                max="5"
-                step="0.5"
-                value="1">
+                <input
+                    type="range"
+                    id="size"
+                    min="1"
+                    max="10"
+                    value="2">
 
-        </div>
+            </div>
 
-        <div class="control-group">
+            <div class="control-group">
 
-            <label>
-                Gap
-                <span id="gapValue">-3</span>
-            </label>
+                <label>
 
-            <input
-                type="range"
-                id="gap"
-                min="-5"
-                max="10"
-                value="-3">
+                    Thickness
 
-        </div>
+                    <span id="thicknessValue">1</span>
 
-        <div class="control-group">
+                </label>
 
-            <label for="color">Color</label>
+                <input
+                    type="range"
+                    id="thickness"
+                    min="0.5"
+                    max="5"
+                    step="0.5"
+                    value="1">
 
-            <input
-                type="color"
-                id="color"
-                value="#00ff00">
+            </div>
 
-        </div>
+            <div class="control-group">
 
-        <div class="checkbox-group">
+                <label>
 
-            <label>
-                <input type="checkbox" id="centerDot">
-                Center Dot
-            </label>
+                    Gap
 
-            <label>
-                <input type="checkbox" id="outline">
-                Outline
-            </label>
+                    <span id="gapValue">-3</span>
 
-        </div>
+                </label>
 
-        <hr>
+                <input
+                    type="range"
+                    id="gap"
+                    min="-5"
+                    max="10"
+                    value="-3">
 
-        <h2>👑 Professional Presets</h2>
+            </div>
 
-        <div class="preset-grid">
+            <div class="control-group">
 
-            <button onclick="loadPreset('s1mple')">s1mple</button>
-            <button onclick="loadPreset('donk')">donk</button>
-            <button onclick="loadPreset('m0NESY')">m0NESY</button>
-            <button onclick="loadPreset('ZywOo')">ZywOo</button>
-            <button onclick="loadPreset('NiKo')">NiKo</button>
-            <button onclick="loadPreset('ropz')">ropz</button>
-            <button onclick="loadPreset('device')">device</button>
-            <button onclick="loadPreset('frozen')">frozen</button>
+                <label>Color</label>
 
-        </div>
+                <input
+                    type="color"
+                    id="color"
+                    value="#00ff00">
 
-        <hr>
+            </div>
 
-        <div class="action-buttons">
+            <div class="quick-colors">
 
-            <button
-                class="primary-btn"
-                id="copyConfig">
+                <button class="color green" data-color="#00ff00"></button>
+                <button class="color red" data-color="#ff3b30"></button>
+                <button class="color blue" data-color="#3b82f6"></button>
+                <button class="color yellow" data-color="#facc15"></button>
+                <button class="color white" data-color="#ffffff"></button>
+                <button class="color purple" data-color="#a855f7"></button>
 
-                📋 Copy Crosshair
+            </div>
 
-            </button>
+            <div class="checkbox-group">
 
-            <button class="secondary-btn">
+                <label>
 
-                📥 Export CFG
+                    <input
+                        type="checkbox"
+                        id="centerDot">
 
-            </button>
+                    Center Dot
 
-            <button class="secondary-btn">
+                </label>
 
-                🔄 Reset
+                <label>
 
-            </button>
+                    <input
+                        type="checkbox"
+                        id="outline">
+
+                    Outline
+
+                </label>
+
+            </div>
 
         </div>
 
         <hr>
 
-        <h2>📄 Generated Config</h2>
+        <div class="panel-section">
 
-        <textarea
-            id="configOutput"
-            rows="8"
-            readonly></textarea>
+            <div class="players-header">
+
+                <h2>👑 Professional Players</h2>
+
+                <input
+                    type="text"
+                    id="playerSearch"
+                    placeholder="Search player...">
+
+            </div>
+
+            <div class="players-grid">
+
+                <button class="player-card" data-player="donk">
+                    <strong>🇷🇺 donk</strong>
+                    <small>Team Spirit</small>
+                </button>
+
+                <button class="player-card" data-player="m0NESY">
+                    <strong>🇺🇦 m0NESY</strong>
+                    <small>Falcons</small>
+                </button>
+
+                <button class="player-card" data-player="ZywOo">
+                    <strong>🇫🇷 ZywOo</strong>
+                    <small>Vitality</small>
+                </button>
+
+                <button class="player-card" data-player="NiKo">
+                    <strong>🇧🇦 NiKo</strong>
+                    <small>Falcons</small>
+                </button>
+
+                <button class="player-card" data-player="ropz">
+                    <strong>🇪🇪 ropz</strong>
+                    <small>Vitality</small>
+                </button>
+
+                <button class="player-card" data-player="s1mple">
+                    <strong>🇺🇦 s1mple</strong>
+                    <small>FaZe</small>
+                </button>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="panel-section">
+
+            <h2>📋 Actions</h2>
+
+            <div class="action-buttons">
+
+                <button
+                    id="copyConfig"
+                    class="primary-btn">
+
+                    📋 Copy Crosshair
+
+                </button>
+
+                <button
+                    id="resetCrosshair"
+                    class="secondary-btn">
+
+                    🔄 Reset
+
+                </button>
+
+                <button
+                    id="exportCFG"
+                    class="secondary-btn">
+
+                    📥 Export CFG
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="panel-section">
+
+            <h2>📄 Generated Config</h2>
+
+            <textarea
+                id="configOutput"
+                rows="10"
+                readonly></textarea>
+
+        </div>
 
     </div>
 
