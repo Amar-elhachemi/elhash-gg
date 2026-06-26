@@ -14,7 +14,7 @@
 
 <div class="crosshair-container">
 
-    <!-- Preview Panel -->
+    <!-- Preview -->
     <div class="preview-panel">
 
         <div class="preview-screen">
@@ -26,7 +26,7 @@
                 <div class="arm left"></div>
                 <div class="arm right"></div>
 
-                <div class="dot"></div>
+                <div id="center-dot"></div>
 
             </div>
 
@@ -34,23 +34,34 @@
 
     </div>
 
-    <!-- Controls Panel -->
+    <!-- Controls -->
     <div class="controls-panel">
 
-        <h2>Crosshair Settings</h2>
+        <h2>⚙ Crosshair Settings</h2>
 
         <div class="control-group">
-            <label for="size">Size</label>
+
+            <label>
+                Size
+                <span id="sizeValue">2</span>
+            </label>
+
             <input
                 type="range"
                 id="size"
                 min="1"
                 max="10"
                 value="2">
+
         </div>
 
         <div class="control-group">
-            <label for="thickness">Thickness</label>
+
+            <label>
+                Thickness
+                <span id="thicknessValue">1</span>
+            </label>
+
             <input
                 type="range"
                 id="thickness"
@@ -58,24 +69,34 @@
                 max="5"
                 step="0.5"
                 value="1">
+
         </div>
 
         <div class="control-group">
-            <label for="gap">Gap</label>
+
+            <label>
+                Gap
+                <span id="gapValue">-3</span>
+            </label>
+
             <input
                 type="range"
                 id="gap"
                 min="-5"
                 max="10"
                 value="-3">
+
         </div>
 
         <div class="control-group">
+
             <label for="color">Color</label>
+
             <input
                 type="color"
                 id="color"
                 value="#00ff00">
+
         </div>
 
         <div class="checkbox-group">
@@ -94,18 +115,18 @@
 
         <hr>
 
-        <h2>Professional Presets</h2>
+        <h2>👑 Professional Presets</h2>
 
         <div class="preset-grid">
 
-            <button>s1mple</button>
-            <button>ZywOo</button>
-            <button>m0NESY</button>
-            <button>donk</button>
-            <button>NiKo</button>
-            <button>ropz</button>
-            <button>device</button>
-            <button>frozen</button>
+            <button onclick="loadPreset('s1mple')">s1mple</button>
+            <button onclick="loadPreset('donk')">donk</button>
+            <button onclick="loadPreset('m0NESY')">m0NESY</button>
+            <button onclick="loadPreset('ZywOo')">ZywOo</button>
+            <button onclick="loadPreset('NiKo')">NiKo</button>
+            <button onclick="loadPreset('ropz')">ropz</button>
+            <button onclick="loadPreset('device')">device</button>
+            <button onclick="loadPreset('frozen')">frozen</button>
 
         </div>
 
@@ -113,23 +134,31 @@
 
         <div class="action-buttons">
 
-            <button class="primary-btn">
+            <button
+                class="primary-btn"
+                id="copyConfig">
+
                 📋 Copy Crosshair
+
             </button>
 
             <button class="secondary-btn">
+
                 📥 Export CFG
+
             </button>
 
             <button class="secondary-btn">
+
                 🔄 Reset
+
             </button>
 
         </div>
 
         <hr>
 
-        <h2>Generated Config</h2>
+        <h2>📄 Generated Config</h2>
 
         <textarea
             id="configOutput"
