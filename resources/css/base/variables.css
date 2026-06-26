@@ -1,6 +1,9 @@
 :root{
 
-    /* Colors */
+    /* ==========================================
+       COLORS
+    ========================================== */
+
     --primary:#f97316;
     --primary-hover:#ea580c;
 
@@ -11,25 +14,41 @@
     --text:#ffffff;
     --muted:#94a3b8;
 
-    --success:#22c55e;
-    --danger:#ef4444;
-
     --border:rgba(255,255,255,.08);
 
-    /* Radius */
+    --success:#22c55e;
+    --danger:#ef4444;
+    --warning:#facc15;
 
-    --radius-sm:10px;
-    --radius-md:16px;
-    --radius-lg:20px;
-    --radius-xl:24px;
-
-    /* Animation */
-
-    --transition:.3s ease;
-
-    /* Shadows */
+    /* ==========================================
+       SHADOWS
+    ========================================== */
 
     --shadow:
-        0 20px 40px rgba(0,0,0,.25);
+        0 20px 45px rgba(0,0,0,.35);
+
+    --shadow-lg:
+        0 30px 70px rgba(0,0,0,.55);
+
+    /* ==========================================
+       BORDER RADIUS
+    ========================================== */
+
+    --radius-sm:12px;
+    --radius:18px;
+    --radius-lg:24px;
+
+    /* ==========================================
+       TRANSITIONS
+    ========================================== */
+
+    --transition:.28s ease;
+
+    /* ==========================================
+       MAX WIDTHS
+    ========================================== */
+
+    --container:1200px;
+    --container-lg:1400px;
 
 }

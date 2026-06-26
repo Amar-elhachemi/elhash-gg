@@ -1,46 +1,52 @@
-.primary-btn,
-.secondary-btn{
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:14px 28px;
 
     border:none;
-
-    padding:14px 18px;
-
-    border-radius:var(--radius-md);
+    border-radius:14px;
 
     cursor:pointer;
 
-    transition:var(--transition);
-
     font-weight:600;
 
+    transition:var(--transition);
+
+    text-decoration:none;
 }
 
-.primary-btn{
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-primary{
 
     background:var(--primary);
-
     color:white;
 
 }
 
-.primary-btn:hover{
+.btn-primary:hover{
 
     background:var(--primary-hover);
 
-    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgba(249,115,22,.35);
 
 }
 
-.secondary-btn{
+.btn-secondary{
 
-    background:var(--surface-light);
+    background:var(--surface);
 
     color:white;
 
 }
 
-.secondary-btn:hover{
+.btn-secondary:hover{
 
-    transform:translateY(-2px);
+    background:#232d3d;
 
 }

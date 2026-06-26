@@ -1,0 +1,414 @@
+/* ==========================================================
+   HOME PAGE
+========================================================== */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:100vh;
+
+    text-align:center;
+
+    padding:120px 20px 80px;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    background:radial-gradient(circle,
+        rgba(249,115,22,.18),
+        transparent 70%);
+
+    top:-250px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    pointer-events:none;
+}
+
+.hero .container{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+
+    font-size:clamp(3.5rem,8vw,6.5rem);
+
+    line-height:1.05;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+}
+
+.hero p{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    color:var(--muted);
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-top:45px;
+
+    flex-wrap:wrap;
+}
+
+/* ==========================
+   SECTION TITLES
+========================== */
+
+.section-title{
+
+    margin-bottom:55px;
+}
+
+.section-title h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    margin-bottom:14px;
+}
+
+.section-title p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    line-height:1.7;
+}
+
+/* ==========================
+   GAME CARDS
+========================== */
+
+.tool-card{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:34px;
+}
+
+.tool-card .icon{
+
+    width:80px;
+    height:80px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:40px;
+
+    border-radius:18px;
+
+    background:rgba(249,115,22,.10);
+
+    margin-bottom:25px;
+}
+
+.tool-card h3{
+
+    font-size:1.4rem;
+
+    margin-bottom:16px;
+}
+
+.tool-card p{
+
+    flex:1;
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+.grid-4 .tool-card{
+
+    text-align:center;
+}
+
+.grid-4 h2{
+
+    font-size:3rem;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+}
+
+.grid-4 p{
+
+    margin:0;
+
+    color:var(--muted);
+}
+
+/* ==========================
+   HOVER
+========================== */
+
+.tool-card{
+
+    transition:
+        transform .30s,
+        box-shadow .30s,
+        border-color .30s;
+}
+
+.tool-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--primary);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45),
+        0 0 35px rgba(249,115,22,.12);
+}
+
+.tool-card:hover .icon{
+
+    transform:scale(1.08);
+}
+
+.tool-card .icon{
+
+    transition:.30s;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:170px;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+
+        width:100%;
+        max-width:330px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+
+        font-size:3rem;
+    }
+
+    .section{
+
+        padding:70px 0;
+    }
+
+}
+/* ==========================================
+   GAME CARDS
+========================================== */
+
+.game-card{
+
+    height:100%;
+
+}
+
+.game-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+.game-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+    background:rgba(249,115,22,.12);
+
+    transition:.35s;
+
+}
+
+.game-card:hover .game-icon{
+
+    transform:rotate(-6deg) scale(1.08);
+
+}
+
+.game-header h3{
+
+    margin-bottom:6px;
+
+}
+
+.game-header span{
+
+    color:var(--muted);
+
+    font-size:.95rem;
+
+}
+
+.game-features{
+
+    margin-bottom:35px;
+
+}
+
+.game-features li{
+
+    padding:12px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+    color:var(--muted);
+
+    transition:.25s;
+
+}
+
+.game-card:hover .game-features li{
+
+    color:white;
+
+}
+/* =======================================
+   HERO TAGS
+======================================= */
+
+.hero-tags{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+margin-top:55px;
+
+}
+
+.hero-tags span{
+
+padding:14px 22px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+color:white;
+
+font-size:.95rem;
+
+transition:.3s;
+
+backdrop-filter:blur(12px);
+
+}
+
+.hero-tags span:hover{
+
+transform:translateY(-4px);
+
+background:rgba(249,115,22,.15);
+
+border-color:rgba(249,115,22,.35);
+
+}
+
+.hero-grid{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+
+linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+background-size:40px 40px;
+
+mask-image:radial-gradient(circle at center, black 30%, transparent 90%);
+
+opacity:.45;
+
+pointer-events:none;
+
+}
