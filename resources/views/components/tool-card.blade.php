@@ -1,9 +1,51 @@
-<a href="{{ route($route) }}" class="dashboard-card">
+<a href="{{ route($route) }}" class="tool-card">
 
-    <div class="emoji">{{ $icon }}</div>
+    <div class="tool-card-top">
 
-    <h2>{{ $title }}</h2>
+        <div class="tool-icon">
 
-    <p>{{ $description }}</p>
+            {{ $icon }}
+
+        </div>
+
+        <span class="tool-status">
+
+            Available
+
+        </span>
+
+    </div>
+
+    <div class="tool-content">
+
+        <h2>
+
+            {{ $title }}
+
+        </h2>
+
+        <p>
+
+            {{ $description }}
+
+        </p>
+
+    </div>
+
+    <div class="tool-footer">
+
+        <span>
+
+            Launch Tool
+
+        </span>
+
+        <span class="arrow">
+
+            →
+
+        </span>
+
+    </div>
 
 </a>

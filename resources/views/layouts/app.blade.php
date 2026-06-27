@@ -34,32 +34,50 @@
 
         <nav class="nav-links">
 
-            <a href="{{ route('home') }}"
-               class="{{ request()->routeIs('home') ? 'active' : '' }}">
-                Home
-            </a>
+    <a href="{{ route('home') }}"
+       class="{{ request()->routeIs('home') ? 'active' : '' }}">
+        Home
+    </a>
 
-            <a href="{{ route('cs2') }}"
-               class="{{ request()->routeIs('cs2*') ? 'active' : '' }}">
-                CS2
-            </a>
+    <a href="{{ route('cs2') }}"
+       class="{{ request()->routeIs('cs2*') ? 'active' : '' }}">
+        CS2
+    </a>
 
-            <a href="{{ route('valorant') }}"
-               class="{{ request()->routeIs('valorant*') ? 'active' : '' }}">
-                Valorant
-            </a>
+    <a href="{{ route('valorant') }}"
+       class="{{ request()->routeIs('valorant*') ? 'active' : '' }}">
+        Valorant
+    </a>
 
-            <a href="{{ route('utilities') }}"
-               class="{{ request()->routeIs('utilities*') ? 'active' : '' }}">
-                Utilities
-            </a>
+    <a href="{{ route('utilities') }}"
+       class="{{ request()->routeIs('utilities*') ? 'active' : '' }}">
+        Utilities
+    </a>
 
-            <a href="{{ route('about') }}"
-               class="{{ request()->routeIs('about*') ? 'active' : '' }}">
-                About
-            </a>
+    <a href="{{ route('about') }}"
+       class="{{ request()->routeIs('about*') ? 'active' : '' }}">
+        About
+    </a>
 
-        </nav>
+</nav>
+
+<div class="mobile-menu">
+
+    <a href="{{ route('home') }}">Home</a>
+    <a href="{{ route('cs2') }}">CS2</a>
+    <a href="{{ route('valorant') }}">Valorant</a>
+    <a href="{{ route('utilities') }}">Utilities</a>
+    <a href="{{ route('about') }}">About</a>
+
+    <a
+        href="{{ route('cs2.crosshair') }}"
+        class="btn btn-primary">
+
+        Explore Tools →
+
+    </a>
+
+</div>
 
         <div class="nav-actions">
 

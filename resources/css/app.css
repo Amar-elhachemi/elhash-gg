@@ -4,6 +4,7 @@
 @import "./base/typography.css";
 @import "./components/cursor.css";
 @import "./components/glass.css";
+@import "./components/tool-card.css";
 
 @import "./layout/navbar.css";
 @import "./layout/main.css";
@@ -22,6 +23,7 @@
 @import "./pages/home.css";
 @import "./pages/dashboard.css";
 @import "./pages/about.css"; 
+@import "./pages/dashboard.css";
 /* ==========================
    SCROLL ANIMATION
 ========================== */
