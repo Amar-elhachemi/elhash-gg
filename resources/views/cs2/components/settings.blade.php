@@ -1,4 +1,4 @@
-<div class="panel-section">
+<x-panel title="⚙ Crosshair Settings">
 
     <h2>⚙ Crosshair Settings</h2>
 
@@ -102,4 +102,4 @@
 
     </div>
 
-</div>
+</x-panel>

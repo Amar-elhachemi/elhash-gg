@@ -3,17 +3,29 @@
 ====================================================== */
 
 .control-group{
-    margin-bottom:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
 }
 
 .control-group label{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    margin-bottom:10px;
-    color:#f8fafc;
+
+    color:white;
+
+    font-size:.95rem;
+
     font-weight:600;
-    font-size:15px;
+
 }
 
 .control-group span{
@@ -28,23 +40,51 @@
 ========================== */
 
 .control-group input[type="range"]{
+
     width:100%;
-    height:6px;
+
+    height:7px;
+
     appearance:none;
-    background:#1f2937;
+
+    border:none;
+
     border-radius:999px;
-    outline:none;
+
     cursor:pointer;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            var(--primary),
+
+            #fb923c
+
+        );
+
 }
 
 .control-group input[type="range"]::-webkit-slider-thumb{
+
     appearance:none;
-    width:18px;
-    height:18px;
+
+    width:20px;
+
+    height:20px;
+
     border-radius:50%;
-    background:#f97316;
+
+    background:white;
+
+    border:4px solid var(--primary);
+
     cursor:pointer;
-    transition:.2s;
+
+    transition:.25s;
+
 }
 
 .control-group input[type="range"]::-webkit-slider-thumb:hover{
@@ -90,13 +130,26 @@
     border:none;
     border-radius:12px;
     cursor:pointer;
-    transition:.2s;
+    transition:
+
+    transform .25s,
+
+    box-shadow .25s,
+
+    border-color .25s;
     border:2px solid transparent;
 }
 
 .color:hover{
-    transform:translateY(-2px);
+
+    transform:scale(1.08);
+
     border-color:white;
+
+    box-shadow:
+
+        0 0 20px currentColor;
+
 }
 
 .color.green{
@@ -128,9 +181,13 @@
 ========================== */
 
 .checkbox-group{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
 }
 
 .checkbox-group label{

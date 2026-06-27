@@ -1,4 +1,4 @@
-<div class="panel-section">
+<x-panel title="📋 Actions">
 
     <h2>📋 Actions</h2>
 
@@ -30,4 +30,4 @@
 
     </div>
 
-</div>
+</x-panel>

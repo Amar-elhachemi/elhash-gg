@@ -10,14 +10,22 @@
 
 <x-page-header
     title="🎯 CS2 Crosshair Generator"
-    description="Create, preview and export professional Counter-Strike 2 crosshairs."
+    description="Build, preview and export professional Counter-Strike 2 crosshairs."
 />
 
 <div class="crosshair-container">
 
-    @include('cs2.components.preview')
+    <div class="left-column">
 
-    @include('cs2.components.controls')
+        @include('cs2.components.preview')
+
+    </div>
+
+    <div class="right-column">
+
+        @include('cs2.components.controls')
+
+    </div>
 
 </div>
 

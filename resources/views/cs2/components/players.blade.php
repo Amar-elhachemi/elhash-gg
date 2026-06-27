@@ -1,4 +1,5 @@
-<div class="panel-section">
+<x-panel title="👑 Professional Players">
+
 
     <div class="players-header">
 
@@ -45,4 +46,4 @@
 
     </div>
 
-</div>
+</x-panel>

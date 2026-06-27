@@ -1,4 +1,4 @@
-<div class="panel-section">
+<x-panel title="📄 Generated Config">
 
     <h2>📄 Generated Config</h2>
 
@@ -7,4 +7,4 @@
         rows="10"
         readonly></textarea>
 
-</div>
+</x-panel>

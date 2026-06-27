@@ -10,7 +10,7 @@
     <title>@yield('title', 'ELHASH.GG')</title>
 
     @vite(['resources/css/app.css','resources/js/app.js'])
-
+    @stack('styles')
 </head>
 
 <body>
@@ -106,7 +106,7 @@
     @yield('content')
 
 </main>
-
+@stack('styles')
 </body>
 
 </html>
