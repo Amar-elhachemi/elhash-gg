@@ -68,7 +68,7 @@ elements.colorButtons.forEach(button=>{
     });
 
 });
-const maps = document.querySelectorAll(".map-btn");
+const maps = document.querySelectorAll(".map-card");
 const preview = document.querySelector(".preview-screen");
 
 preview.style.backgroundImage = "url('/images/maps/mirage.jpg')";
@@ -99,5 +99,34 @@ elements.colorButtons.forEach(button=>{
         updateCrosshair();
 
     });
+
+});
+const fullscreenBtn = document.querySelector(".fullscreen-btn");
+const previewScreen = document.getElementById("preview-screen");
+
+fullscreenBtn?.addEventListener("click", async () => {
+
+    if (!document.fullscreenElement) {
+
+        await previewScreen.requestFullscreen();
+
+        fullscreenBtn.textContent = "🡼";
+
+    } else {
+
+        await document.exitFullscreen();
+
+        fullscreenBtn.textContent = "⛶";
+
+    }
+
+});
+document.addEventListener("fullscreenchange", () => {
+
+    if (!document.fullscreenElement) {
+
+        fullscreenBtn.textContent = "⛶";
+
+    }
 
 });

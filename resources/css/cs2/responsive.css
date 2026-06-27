@@ -168,3 +168,22 @@
     }
 
 }
+@media (max-width:900px){
+
+    .preview-footer{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .preview-footer{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

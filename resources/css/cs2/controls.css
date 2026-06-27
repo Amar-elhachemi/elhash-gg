@@ -2,15 +2,80 @@
    CONTROLS
 ====================================================== */
 
-.control-group{
+.panel-section{
+
+    position:relative;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.03),
+            rgba(255,255,255,.015)
+        );
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.35s;
+
+}
+
+.panel-section:hover{
+
+    border-color:
+        rgba(249,115,22,.18);
+
+    box-shadow:
+        0 10px 30px rgba(249,115,22,.08);
+
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.panel-section h2{
 
     display:flex;
 
-    flex-direction:column;
+    align-items:center;
 
     gap:12px;
 
+    margin:0 0 18px;
+
+    color:white;
+
+    font-size:1.35rem;
+
+    font-weight:800;
+
+    letter-spacing:.3px;
+
 }
+
+/* ==========================
+   CONTROL GROUP
+========================== */
+
+.control-group{
+
+    margin-bottom:18px;
+
+}
+
+.control-group:last-child{
+
+    margin-bottom:0;
+
+}
+
+/* ==========================
+   LABEL
+========================== */
 
 .control-group label{
 
@@ -20,19 +85,50 @@
 
     align-items:center;
 
-    color:white;
+    margin-bottom:8px;
 
-    font-size:.95rem;
+    color:#e2e8f0;
 
-    font-weight:600;
+    font-weight:700;
+
+    font-size:.96rem;
 
 }
 
+/* ==========================
+   VALUE BADGE
+========================== */
+
 .control-group span{
-    color:#f97316;
-    font-weight:700;
-    min-width:30px;
-    text-align:right;
+
+    min-width:42px;
+
+    padding:4px 8px;
+
+    text-align:center;
+
+    border-radius:999px;
+
+    background:
+        rgba(249,115,22,.12);
+
+    color:#fb923c;
+
+    font-weight:800;
+
+    font-size:.82rem;
+
+    transition:.25s;
+
+}
+
+.control-group:hover span{
+
+    transform:scale(1.08);
+
+    background:
+        rgba(249,115,22,.20);
+
 }
 
 /* ==========================
