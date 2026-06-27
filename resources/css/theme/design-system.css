@@ -1,0 +1,46 @@
+/* ======================================================
+   ELHASH.GG DESIGN SYSTEM
+====================================================== */
+
+:root{
+
+    /* BRAND */
+
+    --primary:#f97316;
+    --primary-hover:#fb923c;
+
+    --success:#22c55e;
+    --danger:#ef4444;
+    --warning:#facc15;
+
+    /* BACKGROUND */
+
+    --bg:#0b1220;
+    --surface:#111827;
+    --surface-2:#1f2937;
+
+    /* TEXT */
+
+    --text:#ffffff;
+    --muted:#94a3b8;
+
+    /* BORDER */
+
+    --border:rgba(255,255,255,.08);
+
+    /* RADIUS */
+
+    --radius-sm:10px;
+    --radius-md:16px;
+    --radius-lg:24px;
+
+    /* SHADOW */
+
+    --shadow:
+        0 20px 60px rgba(0,0,0,.30);
+
+    /* TRANSITIONS */
+
+    --transition:.25s ease;
+
+}

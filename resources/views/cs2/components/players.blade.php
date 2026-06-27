@@ -1,47 +1,134 @@
 <x-panel title="👑 Professional Players">
 
-
     <div class="players-header">
-
-        <h2>👑 Professional Players</h2>
 
         <input
             type="text"
             id="playerSearch"
-            placeholder="Search player...">
+            placeholder="🔍 Search player...">
 
     </div>
 
-    <div class="players-grid">
+    <div class="players-list">
 
         <button class="player-card" data-player="donk">
-            <strong>🇷🇺 donk</strong>
-            <small>Team Spirit</small>
+
+            <div class="player-avatar">
+                🇷🇺
+            </div>
+
+            <div class="player-info">
+
+                <strong>donk</strong>
+
+                <small>Team Spirit</small>
+
+            </div>
+
+            <div class="player-arrow">
+                →
+            </div>
+
         </button>
 
         <button class="player-card" data-player="m0NESY">
-            <strong>🇺🇦 m0NESY</strong>
-            <small>Falcons</small>
+
+            <div class="player-avatar">
+                🇺🇦
+            </div>
+
+            <div class="player-info">
+
+                <strong>m0NESY</strong>
+
+                <small>Falcons</small>
+
+            </div>
+
+            <div class="player-arrow">
+                →
+            </div>
+
         </button>
 
         <button class="player-card" data-player="ZywOo">
-            <strong>🇫🇷 ZywOo</strong>
-            <small>Vitality</small>
+
+            <div class="player-avatar">
+                🇫🇷
+            </div>
+
+            <div class="player-info">
+
+                <strong>ZywOo</strong>
+
+                <small>Vitality</small>
+
+            </div>
+
+            <div class="player-arrow">
+                →
+            </div>
+
         </button>
 
         <button class="player-card" data-player="NiKo">
-            <strong>🇧🇦 NiKo</strong>
-            <small>Falcons</small>
+
+            <div class="player-avatar">
+                🇧🇦
+            </div>
+
+            <div class="player-info">
+
+                <strong>NiKo</strong>
+
+                <small>Falcons</small>
+
+            </div>
+
+            <div class="player-arrow">
+                →
+            </div>
+
         </button>
 
         <button class="player-card" data-player="ropz">
-            <strong>🇪🇪 ropz</strong>
-            <small>Vitality</small>
+
+            <div class="player-avatar">
+                🇪🇪
+            </div>
+
+            <div class="player-info">
+
+                <strong>ropz</strong>
+
+                <small>Vitality</small>
+
+            </div>
+
+            <div class="player-arrow">
+                →
+            </div>
+
         </button>
 
         <button class="player-card" data-player="s1mple">
-            <strong>🇺🇦 s1mple</strong>
-            <small>FaZe</small>
+
+            <div class="player-avatar">
+                🇺🇦
+            </div>
+
+            <div class="player-info">
+
+                <strong>s1mple</strong>
+
+                <small>FaZe</small>
+
+            </div>
+
+            <div class="player-arrow">
+                →
+            </div>
+
         </button>
 
     </div>

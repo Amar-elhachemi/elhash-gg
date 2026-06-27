@@ -1,0 +1,71 @@
+/* ======================================================
+   SAVED CROSSHAIRS
+====================================================== */
+
+#savedCrosshairs{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    margin-bottom:18px;
+
+}
+
+.saved-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 14px;
+
+    border-radius:14px;
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.saved-item:hover{
+
+    transform:translateY(-2px);
+
+    border-color:#f97316;
+
+}
+
+.saved-name{
+
+    font-weight:600;
+
+}
+
+.saved-delete{
+
+    color:#ef4444;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+.empty-state{
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    padding:18px;
+
+}

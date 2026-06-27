@@ -1,0 +1,125 @@
+.pro-page{
+
+    margin-top:50px;
+
+}
+
+.search-bar{
+
+    margin-bottom:35px;
+
+}
+
+.search-bar input{
+
+    width:100%;
+
+    padding:18px;
+
+    border-radius:14px;
+
+}
+
+.player-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+
+    gap:24px;
+
+}
+
+.pro-card{
+
+    background:var(--surface);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:24px;
+
+    transition:.25s;
+
+}
+
+.pro-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.pro-header{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.flag{
+
+    font-size:34px;
+
+}
+
+.pro-body{
+
+    display:grid;
+
+    gap:12px;
+
+    margin-bottom:24px;
+
+}
+
+.pro-body div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    padding-bottom:8px;
+
+}
+.player-avatar{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid rgba(255,255,255,.08);
+
+}
+.card-actions{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.favorite-btn{
+
+    width:46px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}

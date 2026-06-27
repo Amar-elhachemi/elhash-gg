@@ -1,3 +1,4 @@
+@import "./theme/design-system.css";
 @import "./base/variables.css";
 @import "./base/reset.css";
 @import "./base/layout.css";
@@ -25,6 +26,10 @@
 @import "./pages/about.css"; 
 @import "./pages/dashboard.css";
 @import "./components/panel.css";
+@import "./components/toast.css";
+@import "./pages/cs2-home.css";
+@import "./pages/config-generator.css";
+@import "./pages/pro-settings.css";
 
 /* ==========================
    SCROLL ANIMATION

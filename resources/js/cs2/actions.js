@@ -1,5 +1,6 @@
 import { elements, defaults } from "./config";
 import { updateCrosshair } from "./preview";
+import { toast } from "../components/toast";
 
 elements.copyButton?.addEventListener("click", () => {
 
@@ -7,7 +8,15 @@ elements.copyButton?.addEventListener("click", () => {
 
     const original = elements.copyButton.textContent;
 
-    elements.copyButton.textContent = "✅ Copied!";
+    toast(
+
+    "success",
+
+    "Crosshair Copied",
+
+    "Ready to paste into CS2"
+
+);
     elements.copyButton.classList.add("copied");
 
     setTimeout(() => {
@@ -51,7 +60,15 @@ elements.exportButton?.addEventListener("click",()=>{
     a.href = url;
     a.download = "elhash-crosshair.cfg";
 
-    a.click();
+    toast(
+
+    "success",
+
+    "CFG Exported",
+
+    "Saved successfully"
+
+);
 
     URL.revokeObjectURL(url);
 
@@ -64,6 +81,11 @@ elements.colorButtons.forEach(button=>{
         elements.color.value = button.dataset.color;
 
         updateCrosshair();
+        toast(
+    "warning",
+    "Reset",
+    "Crosshair restored"
+);
 
     });
 

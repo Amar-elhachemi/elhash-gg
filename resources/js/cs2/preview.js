@@ -68,6 +68,9 @@ export function generateConfig() {
 
     ];
 
-    elements.configOutput.value = commands.join(";\n") + ";";
+    elements.configOutput.value =
+    commands
+        .map(command => command + ";")
+        .join("\n");
 
 }
