@@ -1,15 +1,10 @@
 <x-panel title="⚙ Crosshair Settings">
 
-    <h2>⚙ Crosshair Settings</h2>
-
     <div class="control-group">
 
         <label>
-
             Size
-
             <span id="sizeValue">2</span>
-
         </label>
 
         <input
@@ -24,11 +19,8 @@
     <div class="control-group">
 
         <label>
-
             Thickness
-
             <span id="thicknessValue">1</span>
-
         </label>
 
         <input
@@ -44,11 +36,8 @@
     <div class="control-group">
 
         <label>
-
             Gap
-
             <span id="gapValue">-3</span>
-
         </label>
 
         <input
@@ -85,19 +74,13 @@
     <div class="checkbox-group">
 
         <label>
-
             <input type="checkbox" id="centerDot">
-
             Center Dot
-
         </label>
 
         <label>
-
             <input type="checkbox" id="outline">
-
             Outline
-
         </label>
 
     </div>

@@ -1,5 +1,4 @@
 import { elements } from "./config";
-
 import { updateCrosshair } from "./preview";
 
 import "./presets";
@@ -11,37 +10,25 @@ import "./search";
     elements.thickness,
     elements.gap,
     elements.color
-
-].forEach(input=>{
-
-    input?.addEventListener("input",updateCrosshair);
-
+].forEach(input => {
+    input?.addEventListener("input", updateCrosshair);
 });
 
 [
     elements.centerDot,
     elements.outline
-
-].forEach(input=>{
-
-    input?.addEventListener("change",updateCrosshair);
-
+].forEach(input => {
+    input?.addEventListener("change", updateCrosshair);
 });
 
-elements.playerCards.forEach(card=>{
-
-    card.addEventListener("click",()=>{
-
+elements.playerCards.forEach(card => {
+    card.addEventListener("click", () => {
         const player = card.dataset.player;
 
-        if(window.loadPreset){
-
+        if (window.loadPreset) {
             window.loadPreset(player);
-
         }
-
     });
-
 });
 
 updateCrosshair();
