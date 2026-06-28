@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Cs2Controller;
 use App\Http\Controllers\ValorantController;
@@ -28,6 +28,18 @@ Route::get('/cs2/maps', [Cs2Controller::class, 'maps'])
 
 Route::get('/valorant', [ValorantController::class, 'index'])
     ->name('valorant');
+
+Route::get('/valorant/crosshair-generator', [ValorantController::class, 'crosshair'])
+    ->name('valorant.crosshair');
+
+Route::get('/valorant/pro-settings', [ValorantController::class, 'proSettings'])
+    ->name('valorant.prosettings');
+
+Route::get('/valorant/agents', [ValorantController::class, 'agents'])
+    ->name('valorant.agents');
+
+Route::get('/valorant/lineups', [ValorantController::class, 'lineups'])
+    ->name('valorant.lineups');
 
 Route::get('/utilities', [UtilitiesController::class, 'index'])
     ->name('utilities');
@@ -56,3 +68,6 @@ Route::get('/cs2/player/{nickname}', [Cs2Controller::class,'player'])
 Route::get('/cs2/crosshair/{nickname}',
     [Cs2Controller::class,'crosshairPlayer'])
     ->name('cs2.crosshair.player');
+
+Route::get('/search',[SearchController::class,'index'])
+    ->name('search');

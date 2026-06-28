@@ -58,6 +58,16 @@
        class="{{ request()->routeIs('about*') ? 'active' : '' }}">
         About
     </a>
+    <form
+    action="{{ route('search') }}"
+    method="GET"
+    class="nav-search">
+
+    <input
+        name="q"
+        placeholder="Search ELHASH.GG">
+
+</form>
 
 </nav>
 
