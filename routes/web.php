@@ -34,3 +34,25 @@ Route::get('/utilities', [UtilitiesController::class, 'index'])
 
 Route::get('/about', [AboutController::class, 'index'])
     ->name('about');
+    
+Route::get('/utilities/sensitivity-converter', [UtilitiesController::class, 'sensitivity'])
+    ->name('utilities.sensitivity');
+
+Route::get('/utilities/fps-calculator', [UtilitiesController::class, 'fps'])
+    ->name('utilities.fps');
+
+Route::get('/utilities/monitor-distance', [UtilitiesController::class, 'monitor'])
+    ->name('utilities.monitor');
+
+Route::get('/utilities/config-converter', [UtilitiesController::class, 'config'])
+    ->name('utilities.config');
+
+ Route::get('/cs2/maps/{map}', [Cs2Controller::class, 'map'])
+    ->name('cs2.map');
+
+Route::get('/cs2/player/{nickname}', [Cs2Controller::class,'player'])
+    ->name('cs2.player');
+
+Route::get('/cs2/crosshair/{nickname}',
+    [Cs2Controller::class,'crosshairPlayer'])
+    ->name('cs2.crosshair.player');

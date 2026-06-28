@@ -1,0 +1,64 @@
+.player-hero{
+
+    display:flex;
+    align-items:center;
+    gap:40px;
+
+    margin:40px 0;
+
+    padding:30px;
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:20px;
+
+}
+
+.player-hero img{
+
+    width:220px;
+    height:220px;
+
+    object-fit:contain;
+
+}
+
+.player-meta{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+}
+
+.player-meta h1{
+
+    font-size:64px;
+    margin:0;
+
+}
+
+.player-meta p{
+
+    font-size:22px;
+    opacity:.8;
+
+}
+
+.country{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:8px 16px;
+
+    background:#f97316;
+
+    border-radius:10px;
+
+    color:white;
+
+    width:max-content;
+
+}

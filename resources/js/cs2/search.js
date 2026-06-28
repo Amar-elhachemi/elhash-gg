@@ -1,19 +1,24 @@
-import { elements } from "./config";
+document.addEventListener("DOMContentLoaded", () => {
 
-elements.playerSearch?.addEventListener("input",()=>{
+    const input = document.getElementById("playerSearch");
 
-    const value =
-        elements.playerSearch.value.toLowerCase();
+    if (!input) return;
 
-    elements.playerCards.forEach(card=>{
+    const cards = document.querySelectorAll(".pro-card");
 
-        const text =
-            card.textContent.toLowerCase();
+    input.addEventListener("input", () => {
 
-        card.style.display =
-            text.includes(value)
-            ? ""
-            : "none";
+        const value = input.value.toLowerCase().trim();
+
+        cards.forEach(card => {
+
+            const text = card.textContent.toLowerCase();
+
+            card.style.display = text.includes(value)
+                ? ""
+                : "none";
+
+        });
 
     });
 

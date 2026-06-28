@@ -161,3 +161,75 @@
     transform:translateX(6px);
 
 }
+
+.player-hero{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+    margin:50px 0;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.03);
+
+}
+
+.player-hero img{
+
+    width:220px;
+
+    height:auto;
+
+    object-fit:contain;
+
+}
+
+.player-meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.player-meta h1{
+
+    font-size:3rem;
+
+    margin-bottom:10px;
+
+}
+
+.player-meta p{
+
+    font-size:1.2rem;
+
+    opacity:.8;
+
+}
+
+.country{
+
+    margin-top:15px;
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    width:max-content;
+
+}

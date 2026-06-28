@@ -1,4 +1,3 @@
-```blade
 @extends('layouts.app')
 
 @section('title', 'Counter-Strike 2')
@@ -143,4 +142,4 @@
 </section>
 
 @endsection
-```
+

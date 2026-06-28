@@ -1,4 +1,3 @@
-```blade
 @extends('layouts.app')
 
 @section('title', 'CS2 Config Generator')
@@ -88,4 +87,4 @@
 </div>
 
 @endsection
-```
+

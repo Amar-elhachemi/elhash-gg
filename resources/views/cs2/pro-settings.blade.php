@@ -22,32 +22,19 @@
 
     <div class="player-grid">
 
-        @foreach([
-            ['donk','🇷🇺','Team Spirit'],
-            ['m0NESY','🇺🇦','Falcons'],
-            ['ZywOo','🇫🇷','Vitality'],
-            ['NiKo','🇧🇦','Falcons'],
-            ['ropz','🇪🇪','Vitality'],
-            ['s1mple','🇺🇦','FaZe'],
-            ['frozen','🇸🇰','FaZe'],
-            ['b1t','🇺🇦','NAVI'],
-            ['jL','🇱🇹','NAVI'],
-            ['broky','🇱🇻','FaZe'],
-            ['torzsi','🇭🇺','MOUZ'],
-            ['xertioN','🇮🇱','MOUZ']
-        ] as $player)
+        @foreach($players as $player)
 
         <div class="pro-card">
 
             <div class="pro-header">
 
-                <div class="flag">{{ $player[1] }}</div>
+                <div class="flag">{{ $player->country }}</div>
 
                 <div>
 
-                    <h3>{{ $player[0] }}</h3>
+                    <h3>{{ $player->nickname }}</h3>
 
-                    <small>{{ $player[2] }}</small>
+                    <small>{{ $player->team }}</small>
 
                 </div>
 
@@ -55,18 +42,18 @@
 
             <div class="pro-body">
 
-                <div><strong>DPI</strong><span>400</span></div>
+                <div><strong>DPI</strong><span>{{ $player->dpi }}</span></div>
 
-                <div><strong>Sensitivity</strong><span>1.80</span></div>
+                <div><strong>Sensitivity</strong><span>{{ $player->sensitivity }}</span></div>
 
-                <div><strong>Resolution</strong><span>1280×960</span></div>
+                <div><strong>Resolution</strong><span>{{ $player->resolution }}</span></div>
 
-                <div><strong>Refresh</strong><span>360 Hz</span></div>
+                <div><strong>Refresh</strong><span>{{ $player->refresh_rate }} Hz</span></div>
 
             </div>
 
             <a
-                href="{{ route('cs2.crosshair') }}"
+                href="{{ route('cs2.player',$player->nickname) }}"
                 class="btn btn-primary">
 
                 View Crosshair →
@@ -81,5 +68,8 @@
 
 </div>
 
-@endsection
+@push('scripts')
+    @vite('resources/js/cs2/search.js')
+@endpush
 
+@endsection
