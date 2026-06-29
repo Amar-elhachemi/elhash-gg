@@ -8,6 +8,8 @@ use App\Http\Controllers\Cs2Controller;
 use App\Http\Controllers\ValorantController;
 use App\Http\Controllers\UtilitiesController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\CrosshairController;
+use App\Http\Controllers\Admin\MapController;
 
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
@@ -99,7 +101,6 @@ Route::put('/admin/players/{player}', [Cs2Controller::class,'updatePlayer'])
 Route::delete('/admin/players/{player}', [Cs2Controller::class,'destroyPlayer'])
     ->name('admin.players.destroy');
 
-use App\Http\Controllers\Admin\CrosshairController;
 
 Route::get('/admin/crosshairs',[CrosshairController::class,'index'])
     ->name('admin.crosshairs');
@@ -109,6 +110,45 @@ Route::get('/admin/crosshairs/create',[CrosshairController::class,'create'])
 
 Route::post('/admin/crosshairs',[CrosshairController::class,'store'])
     ->name('admin.crosshairs.store');
+
+Route::get('/admin/crosshairs/{crosshair}/edit',
+    [CrosshairController::class,'edit'])
+    ->name('admin.crosshairs.edit');
+
+Route::put('/admin/crosshairs/{crosshair}',
+    [CrosshairController::class,'update'])
+    ->name('admin.crosshairs.update');
+
+Route::delete('/admin/crosshairs/{crosshair}',
+    [CrosshairController::class,'destroy'])
+    ->name('admin.crosshairs.destroy');
+
+
+
+Route::get('/admin/maps', [MapController::class,'index'])
+    ->name('admin.maps');
+
+Route::get('/admin/maps/create', [MapController::class,'create'])
+    ->name('admin.maps.create');
+
+Route::post('/admin/maps', [MapController::class,'store'])
+    ->name('admin.maps.store');
+
+
+Route::get('/admin/maps/{map}/edit',
+    [MapController::class,'edit'])
+    ->name('admin.maps.edit');
+
+Route::put('/admin/maps/{map}',
+    [MapController::class,'update'])
+    ->name('admin.maps.update');
+
+Route::delete('/admin/maps/{map}',
+    [MapController::class,'destroy'])
+    ->name('admin.maps.destroy');
+
+
+
 
 
 /*

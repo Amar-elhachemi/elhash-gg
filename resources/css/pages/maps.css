@@ -102,3 +102,30 @@
     margin-bottom:40px;
 
 }
+.map-hero{
+margin-bottom:35px;
+}
+
+.map-info{
+display:flex;
+gap:12px;
+margin-top:15px;
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+padding:8px 14px;
+background:#ff8c00;
+color:#fff;
+border-radius:999px;
+font-size:.85rem;
+font-weight:600;
+}
+
+.map-banner{
+width:100%;
+height:420px;
+object-fit:cover;
+border-radius:18px;
+}

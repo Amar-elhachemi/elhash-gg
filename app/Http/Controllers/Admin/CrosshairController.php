@@ -11,7 +11,9 @@ class CrosshairController extends Controller
 {
     public function index()
     {
-        $crosshairs = Crosshair::with('player')->latest()->get();
+        $crosshairs = Crosshair::with('player')
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         return view('admin.crosshairs.index', compact('crosshairs'));
     }
@@ -27,19 +29,19 @@ class CrosshairController extends Controller
     {
         $validated = $request->validate([
 
-            'player_id' => 'required',
+            'player_id' => 'required|exists:players,id',
 
-            'name' => 'required',
+            'name' => 'required|max:100',
 
             'code' => 'required',
 
-            'color' => 'nullable',
+            'color' => 'nullable|max:30',
 
-            'size' => 'required',
+            'size' => 'required|numeric',
 
-            'gap' => 'required',
+            'gap' => 'required|numeric',
 
-            'thickness' => 'required',
+            'thickness' => 'required|numeric',
 
             'outline' => 'nullable',
 
@@ -52,6 +54,61 @@ class CrosshairController extends Controller
 
         Crosshair::create($validated);
 
-        return redirect()->route('admin.crosshairs');
+        return redirect()
+            ->route('admin.crosshairs')
+            ->with('success', 'Crosshair created successfully.');
+    }
+
+    public function edit(Crosshair $crosshair)
+    {
+        $players = Player::orderBy('nickname')->get();
+
+        return view(
+            'admin.crosshairs.edit',
+            compact('crosshair', 'players')
+        );
+    }
+
+    public function update(Request $request, Crosshair $crosshair)
+    {
+        $validated = $request->validate([
+
+            'player_id' => 'required|exists:players,id',
+
+            'name' => 'required|max:100',
+
+            'code' => 'required',
+
+            'color' => 'nullable|max:30',
+
+            'size' => 'required|numeric',
+
+            'gap' => 'required|numeric',
+
+            'thickness' => 'required|numeric',
+
+            'outline' => 'nullable',
+
+            'dot' => 'nullable',
+
+        ]);
+
+        $validated['outline'] = $request->has('outline');
+        $validated['dot'] = $request->has('dot');
+
+        $crosshair->update($validated);
+
+        return redirect()
+            ->route('admin.crosshairs')
+            ->with('success', 'Crosshair updated successfully.');
+    }
+
+    public function destroy(Crosshair $crosshair)
+    {
+        $crosshair->delete();
+
+        return redirect()
+            ->route('admin.crosshairs')
+            ->with('success', 'Crosshair deleted successfully.');
     }
 }

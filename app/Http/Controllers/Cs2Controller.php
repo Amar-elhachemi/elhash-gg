@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Player;
+use App\Models\Map;
 class Cs2Controller extends Controller
 {
     public function index()
@@ -28,25 +29,25 @@ class Cs2Controller extends Controller
 }
 
     public function maps()
-    {
-        return view('cs2.maps');
-    }
-
-public function map($map)
 {
-    $maps = [
-        'mirage',
-        'dust2',
-        'inferno',
-        'nuke',
-        'ancient',
-        'anubis',
-    ];
+    $maps = Map::where('game', 'CS2')
+        ->orderBy('name')
+        ->get();
 
-    abort_unless(in_array($map, $maps), 404);
+    return view('cs2.maps', compact('maps'));
+}
+
+
+public function map($slug)
+{
+    $map = Map::where('slug', $slug)
+        ->where('game', 'CS2')
+        ->firstOrFail();
 
     return view('cs2.map-details', compact('map'));
 }
+
+
 public function player($nickname)
 {
     $player = Player::where('nickname',$nickname)->firstOrFail();

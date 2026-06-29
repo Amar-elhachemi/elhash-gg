@@ -1,31 +1,70 @@
 @extends('layouts.app')
 
-@section('title', ucfirst($map))
+@section('title', $map->name)
 
 @section('content')
 
 <x-page-header
-    :title="'🗺️ '.ucfirst($map)"
-    description="Interactive map page."
+    :title="'🗺️ '.$map->name"
+    :description="$map->description ?: 'Counter-Strike 2 competitive map.'"
 />
 
 <div class="container">
 
-    <img
-        src="{{ asset('images/maps/'.$map.'.jpg') }}"
-        class="map-banner"
-        alt="{{ $map }}">
+    <div class="map-hero">
+
+        <img
+            src="{{ $map->image ?: asset('images/maps/default.jpg') }}"
+            alt="{{ $map->name }}"
+            class="map-banner">
+
+        <div class="map-info">
+
+            <span class="badge">
+
+                🎯 {{ $map->game }}
+
+            </span>
+
+            <span class="badge">
+
+                ⭐ {{ $map->difficulty }}
+
+            </span>
+
+        </div>
+
+    </div>
 
     <div class="dashboard-grid">
 
         <x-panel>
 
-            <h2>Bombsites</h2>
+            <h2>Overview</h2>
+
+            <p>
+
+                {{ $map->description ?: 'No description available yet.' }}
+
+            </p>
+
+        </x-panel>
+
+        <x-panel>
+
+            <h2>Features</h2>
 
             <ul>
 
-                <li>Bombsite A</li>
-                <li>Bombsite B</li>
+                <li>📍 Interactive Callouts (Coming Soon)</li>
+
+                <li>💨 Smoke Lineups (Coming Soon)</li>
+
+                <li>🔥 Molotov Lineups (Coming Soon)</li>
+
+                <li>⚡ Flash Lineups (Coming Soon)</li>
+
+                <li>🛰️ Radar (Coming Soon)</li>
 
             </ul>
 
@@ -33,15 +72,17 @@
 
         <x-panel>
 
-            <h2>Coming Soon</h2>
+            <h2>Statistics</h2>
 
             <ul>
 
-                <li>Smoke Lineups</li>
-                <li>Flash Lineups</li>
-                <li>Molotov Lineups</li>
-                <li>Callouts</li>
-                <li>Radar</li>
+                <li>Name: {{ $map->name }}</li>
+
+                <li>Game: {{ $map->game }}</li>
+
+                <li>Difficulty: {{ $map->difficulty }}</li>
+
+                <li>Slug: {{ $map->slug }}</li>
 
             </ul>
 
