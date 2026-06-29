@@ -26,4 +26,9 @@ class Player extends Model
     'monitor',
 
 ];
+
+public function crosshairs()
+{
+    return $this->hasMany(Crosshair::class);
+}
 }

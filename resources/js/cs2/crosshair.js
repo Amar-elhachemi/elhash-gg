@@ -32,3 +32,22 @@ elements.playerCards.forEach(card => {
 });
 
 updateCrosshair();
+
+if (window.playerCrosshair) {
+
+    elements.size.value = window.playerCrosshair.size;
+
+    elements.gap.value = window.playerCrosshair.gap;
+
+    elements.thickness.value = window.playerCrosshair.thickness;
+
+    elements.color.value = window.playerCrosshair.color;
+
+    elements.centerDot.checked = window.playerCrosshair.dot;
+
+    elements.outline.checked = window.playerCrosshair.outline;
+
+    updateCrosshair();
+
+}
+

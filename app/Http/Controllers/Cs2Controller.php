@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 use App\Models\Player;
 class Cs2Controller extends Controller
 {
@@ -52,10 +53,105 @@ public function player($nickname)
 
     return view('cs2.player',compact('player'));
 }
+
 public function crosshairPlayer($nickname)
 {
-    $player = Player::where('nickname',$nickname)->firstOrFail();
+    $player = Player::with('crosshairs')
+        ->where('nickname', $nickname)
+        ->firstOrFail();
 
-    return view('cs2.crosshair-generator',compact('player'));
+    $crosshair = $player->crosshairs->first();
+
+    return view('cs2.crosshair-player', compact(
+        'player',
+        'crosshair'
+    ));
 }
+
+
+
+public function adminPlayers()
+{
+    $players = Player::latest()->get();
+
+    return view('admin.players.index', compact('players'));
+}
+
+public function createPlayer()
+{
+    return view('admin.players.create');
+}
+
+public function storePlayer(Request $request)
+{
+    $validated = $request->validate([
+
+        'nickname' => 'required|unique:players',
+
+        'team' => 'required',
+
+        'country' => 'required',
+
+        'game' => 'required',
+
+        'dpi' => 'required',
+
+        'sensitivity' => 'required',
+
+        'resolution' => 'required',
+
+        'refresh_rate' => 'required',
+
+    ]);
+
+    Player::create($validated);
+
+    return redirect()
+        ->route('admin.players')
+        ->with('success','Player created successfully.');
+}
+
+public function editPlayer(Player $player)
+{
+    return view('admin.players.edit', compact('player'));
+}
+
+public function updatePlayer(Request $request, Player $player)
+{
+    $validated = $request->validate([
+
+        'nickname' => 'required',
+
+        'team' => 'required',
+
+        'country' => 'required',
+
+        'game' => 'required',
+
+        'dpi' => 'required',
+
+        'sensitivity' => 'required',
+
+        'resolution' => 'required',
+
+        'refresh_rate' => 'required',
+
+    ]);
+
+    $player->update($validated);
+
+    return redirect()
+        ->route('admin.players')
+        ->with('success','Player updated.');
+}
+
+public function destroyPlayer(Player $player)
+{
+    $player->delete();
+
+    return redirect()
+        ->route('admin.players')
+        ->with('success','Player deleted successfully.');
+}
+
 }

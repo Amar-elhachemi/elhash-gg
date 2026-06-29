@@ -58,16 +58,6 @@
        class="{{ request()->routeIs('about*') ? 'active' : '' }}">
         About
     </a>
-    <form
-    action="{{ route('search') }}"
-    method="GET"
-    class="nav-search">
-
-    <input
-        name="q"
-        placeholder="Search ELHASH.GG">
-
-</form>
 
 </nav>
 
@@ -89,17 +79,58 @@
 
 </div>
 
-        <div class="nav-actions">
+        
+<div class="nav-actions">
 
-            <a
-                href="{{ route('cs2.crosshair') }}"
+    @auth
+
+        <a
+            href="{{ route('dashboard') }}"
+            class="btn">
+
+            Dashboard
+
+        </a>
+
+        <form
+            action="{{ route('logout') }}"
+            method="POST"
+            style="display:inline;">
+
+            @csrf
+
+            <button
+                type="submit"
                 class="btn btn-primary">
 
-                Explore Tools →
+                Logout
 
-            </a>
+            </button>
 
-        </div>
+        </form>
+
+    @else
+
+        <a
+            href="{{ route('login') }}"
+            class="btn">
+
+            Login
+
+        </a>
+
+        <a
+            href="{{ route('register') }}"
+            class="btn btn-primary">
+
+            Register
+
+        </a>
+
+    @endauth
+
+</div>
+
 
         <button class="mobile-toggle">
 

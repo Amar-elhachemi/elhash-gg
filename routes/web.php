@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Cs2Controller;
@@ -71,3 +72,70 @@ Route::get('/cs2/crosshair/{nickname}',
 
 Route::get('/search',[SearchController::class,'index'])
     ->name('search');
+
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+
+    Route::get('/', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+});
+
+Route::get('/admin/players', [Cs2Controller::class,'adminPlayers'])
+    ->name('admin.players');
+
+Route::get('/admin/players/create', [Cs2Controller::class,'createPlayer'])
+    ->name('admin.players.create');
+
+Route::post('/admin/players', [Cs2Controller::class,'storePlayer'])
+    ->name('admin.players.store');
+
+Route::get('/admin/players/{player}/edit', [Cs2Controller::class,'editPlayer'])
+    ->name('admin.players.edit');
+
+Route::put('/admin/players/{player}', [Cs2Controller::class,'updatePlayer'])
+    ->name('admin.players.update');
+
+Route::delete('/admin/players/{player}', [Cs2Controller::class,'destroyPlayer'])
+    ->name('admin.players.destroy');
+
+use App\Http\Controllers\Admin\CrosshairController;
+
+Route::get('/admin/crosshairs',[CrosshairController::class,'index'])
+    ->name('admin.crosshairs');
+
+Route::get('/admin/crosshairs/create',[CrosshairController::class,'create'])
+    ->name('admin.crosshairs.create');
+
+Route::post('/admin/crosshairs',[CrosshairController::class,'store'])
+    ->name('admin.crosshairs.store');
+
+
+/*
+|--------------------------------------------------------------------------
+| Breeze Authentication
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware(['auth', 'verified'])->group(function () {
+
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+});
+
+Route::middleware('auth')->group(function () {
+
+    Route::get('/profile', [ProfileController::class, 'edit'])
+        ->name('profile.edit');
+
+    Route::patch('/profile', [ProfileController::class, 'update'])
+        ->name('profile.update');
+
+    Route::delete('/profile', [ProfileController::class, 'destroy'])
+        ->name('profile.destroy');
+
+});
+
+require __DIR__.'/auth.php';
